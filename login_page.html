@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('bckgrnd1.JPG');
+            background-position: center;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            /* Increased container width */
+            padding: 15px;
+            background-color: maroon;
+        }
+
+        .brand-logo {
+            background-image: url('logo.png');
+            /* Adding the logo as a background image */
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 70px;
+            /* Adjust the height of the logo */
+            width: 200px;
+            /* Adjust the width of the logo */
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        input {
+            margin: 10px 0px;
+            /* Increased top and bottom margins */
+            height: 50px;
+            padding: 10px;
+            /* Increased padding */
+            width: 100%;
+            /* Making input boxes full width */
+            font-size: 16px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            /* Increased bottom margin */
+            color: white;
+            background-color: none;
+            height: 17px;
+            margin-top: 10px;
+        }
+
+        label input[type="checkbox"] {
+            margin-right: 5px;
+            /* Adjust the margin between checkbox and label text */
+        }
+
+        .button {
+            height: 60px;
+            margin: 20px 0px;
+            background-color: rgb(195, 153, 76);
+            border: none;
+            border-radius: 2px;
+            width: 100%;
+            /* Making button full width */
+            font-size: 20px;
+            /* Applying font size */
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #333;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="brand-logo"></div>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <label for="remember-me">
+            <input type="checkbox" id="remember-me"> <span>Remember_me</span>
+        </label>
+        <div class="button">
+            <a href="file:///C:/Users/Administrator/Desktop/suroor/categories.html">LOGIN</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

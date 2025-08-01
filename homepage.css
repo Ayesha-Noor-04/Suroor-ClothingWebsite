@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+ul1 {
+    text-align: center;
+    list-style-type: none;
+    margin-left: 440px;
+    background-color: #220909;
+    margin-top: 90px;
+
+}
+
+ul1 li {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+ul1 li a {
+    color: #c6c6ca;
+    padding: 5px, 20px;
+}
+
+ul1 li a:hover {
+    background-color: #817c7c;
+    transition: 0.6s ease;
+
+
+}
+
+.logo img {
+    width: 350px;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 550px;
+}
+
+body {
+    background-image: url(Wine\ wallpaper\ wallpaper\ background.jpg);
+}
+
+.options a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: #264227;
+    color: #f9f3f3;
+    text-decoration: none;
+    /*border-radius: 4px;*/
+}
+
+.options a:hover {
+    background-color: #45a049;
+    transition: 0.6s ease;
+}
+
+.main-img {
+    align-items: center;
+    margin-left: 400px;
+}
+
+.main-img:hover {
+    transition: 0.3 ease;
+    opacity: 0.8;
+    ;
+}
+
+
+.recommended-products {
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    color: #e7e6e6;
+}
+
+.recommended-products h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #e7e6e6;
+}
+
+.recommended-products p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #e7e6e6;
+}
+
+.recommended-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+
+
+
+.navigationbar {
+    background-color: #220909;
+    margin-top: 0%;
+
+}
+
+
+
+
+
+.complete-your-look {
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    color: #e7e6e6;
+}
+
+.complete-your-look h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #e7e6e6;
+}
+
+.complete-your-look p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #e7e6e6;
+}
+
+.completeyourlookimages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.image-holder {
+    flex: 0 0 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image-holder img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.image-holder:hover {
+    opacity: 0.3;
+    transition: 0.6s ease;
+
+}
+
+.about-us {
+    color: #cdbf5f;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: larger;
+}
+
+.footer {
+    background-color: #220909;
+    border-radius: 15px;
+    width: 100%;
+    color: aliceblue;
+}
+
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+
+}
+
+.footer .box-container .box h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: rgb(104, 101, 64);
+}
+
+.footer .box-container .box h3 i {
+    padding-right: .5rem;
+}
+
+.footer .box-container .box p {
+    font-size: 2;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.footer .box-container .box .share {
+    margin-top: 1rem;
+    color: azure;
+}
+
+.footer .box-container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 4;
+    margin-right: .3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.footer .box-container .box .share a:hover {
+    transform: rotate(360deg);
+}
+
+.footer .box-container .box .link {
+    display: block;
+    font-size: 2;
+    line-height: 2;
+    padding: .5rem 0;
+    color: #c6c6ca;
+}
+
+
+.footer .box-container .box .link:hover {
+    color: var(--primary);
+}
+
+.footer .box-container .box .link i {
+    padding-right: .5rem;
+    color: var(--primary);
+}
+
+.footer .credit {
+    margin-top: 2.5px;
+    padding: 1rem;
+    padding-top: 2rem;
+    border-top: var(--border);
+    text-align: center;
+    font-size: 1;
+}

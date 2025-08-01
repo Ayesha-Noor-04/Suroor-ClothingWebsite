@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Clothing Cart</title>
+    <style>
+        /* Basic styles for the cart */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: rgb(164, 3, 30);
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        /* styles for the container of cart */
+        .cart-container {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Basic styles for the items of cart */
+        .cart-items {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+        
+        .cart-item {
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+        }
+        
+        /* Basic styles for the images in the cart */
+        .cart-item img {
+          max-width: 100px;
+          height: auto;
+        }
+        
+        /* Basic styles for the static delete button */
+        .delete-btn {
+          background-color: #ff4d4d;
+          color: #fff;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+        
+        /* Basic styles to hover delete button */
+        .delete-btn:hover {
+          background-color: #ff1a1a;
+        }
+        
+
+        .cart-buttons {
+          margin-top: 20px;
+          text-align: center;
+        }
+        
+        /* Styling for Edit Cart and Checkout buttons */
+        .edit-cart-btn,
+        .checkout-btn,
+        .close-btn {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: block; /* Change display to block */
+          margin-bottom: 10px; /* Add margin-bottom for spacing */
+          width: 100%; 
+          text-align: center;
+        }
+        
+        /* Hover effect for Edit Cart, Checkout, and Close buttons */
+        .edit-cart-btn:hover,
+        .checkout-btn:hover,
+        .close-btn:hover {
+          background-color: #0056b3;
+        }
+        
+        /* Styling for Subtotal button */
+        .subtotal {
+          background-color: #fcfcfc;
+          color: #0a0101;
+          border-radius: 4px;
+          border-color: #0a0101;
+          padding: 10px 15px; 
+          border-radius: 4px;
+          cursor: pointer;
+          display: block;
+          margin-bottom: 10px;
+          width: auto; 
+          text-align: center;
+          font-weight: bold;
+        }
+        
+        /* Hover effect for Subtotal button */
+        .subtotal:hover {
+          background-color: #9caab9;
+        }
+        
+        .buttons-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        header{
+            height: 20vh;
+            background-size: cover;
+            background-position: center;
+            background-color: #220909;
+        }
+        
+        ul{
+            text-align: center;
+            list-style-type: none;
+        }
+        
+        ul li{
+            display: inline-block;
+            text-align: center;
+            margin-top: 58px;
+            margin-right: 50px;
+        }
+        
+        ul li a{
+            color: #111787;
+            padding: 5px, 20px;
+            /*border: 1px solid #fff;*/
+            transition: 0.6s ease;
+        }
+        
+        ul li a:hover{
+            background-color: #817c7c;
+            transition: 0.6s ease;
+
+        
+        }
+
+        ul1{
+            text-align: center;
+            list-style-type: none;
+            margin-left: 0px;
+            margin-left: 440px;
+        }
+        
+        ul1 li{
+            display: inline-block;
+            text-align: center;
+            margin-top: 58px;
+            margin-right: 50px;
+            }
+        
+        ul1 li a{
+            color: #c6c6ca;
+            padding: 5px, 20px;
+            /*border: 1px solid #fff;*/
+            transition: 0.6s ease;
+        }
+        
+        ul1 li a:hover{
+            background-color: #817c7c;
+            transition: 0.6s ease;
+
+        
+        }
+        
+        .logo img{
+            float: left;
+            width:200px;
+            height:auto;
+            margin-top: -6vh;
+            margin-left: 30px;
+        }
+
+        .footer {
+    background-color: #220909;
+	border-radius: 15px;
+    width: 100%;
+    color: aliceblue;
+
+}
+  
+  .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 1.5rem; 
+    padding: 1rem 0;
+    color: rgb(104, 101, 64);
+}
+  
+  .footer .box-container .box h3 i{
+    padding-right: .5rem;
+  }
+  
+  .footer .box-container .box p{
+    font-size: 2;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+  
+  .footer .box-container .box .share{
+    margin-top: 1rem;
+    color: azure;
+  }
+  
+  .footer .box-container .box .share a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height:  4.5rem;
+    font-size: 4;
+    margin-right: .3rem;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+  .footer .box-container .box .share a:hover{
+    transform: rotate(360deg);
+  }
+  
+  .footer .box-container .box .link {
+    display: block;
+    font-size: 2; 
+    line-height: 2;
+    padding: .5rem 0;
+    color: #c6c6ca;
+}
+
+  
+  .footer .box-container .box .link:hover{
+    color: var(--primary);
+  }
+  
+  .footer .box-container .box .link i{
+    padding-right: .5rem;
+    color: var(--primary);
+  }
+  
+  .footer .credit{
+    margin-top: 2.5px;
+    padding: 1rem;
+    padding-top: 2rem;
+    border-top: var(--border);
+    text-align: center;
+    font-size: 1;
+  }
+
+    </style>
+</head>
+<body>
+  <header>
+    <!--NAV BAR-->
+    <div class="navigationbar">
+        
+        <ul1>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CATEGORIES</a></li>
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">PAYMENT</a></li>
+            <li><a href="#">SERVICES</a></li>
+        </ul1>
+
+        <div class="logo">
+            <img src="logo6.png">
+        </div>
+
+    </div>
+</header>
+ <div class="cart-container">
+                                  <h1>MY BAG</h1>
+
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="pic14.png" alt="Item 1">
+        <p>Rs. 5,000</p>
+        <button class="delete-btn">Delete</button>
+      </div>
+    
+      <div class="cart-item">
+        <img src="pic15.png" alt="Item 2">
+        <p>Rs. 4,500</p>
+        <button class="delete-btn">Delete</button>
+      </div>
+      
+      
+      <div class="cart-item">
+        <img src="pic16.png" alt="Item 3">
+        <p>Rs. 3,650</p>
+        <button class="delete-btn">Delete</button>
+      </div>
+      
+      <div class="cart-item">
+        <img src="pic17.png" alt="Item 4">
+        <p>Rs. 6,000</p>
+        <button class="delete-btn">Delete</button>
+      </div>
+  </div>
+  
+  <div class="subtotal">
+    <p>Subtotal: Rs. 19,150</p>
+  </div>
+
+  <div class="cart-buttons">
+    <a href="file:///C:/Users/Administrator/Desktop/suroor/categories.html"><button class="edit-cart-btn">Continue Shopping</button></a>
+    <a href="file:///C:/Users/Administrator/Desktop/suroor/payment.html"><button class="checkout-btn">Checkout</button></a>
+  </div>
+
+  <button class="close-btn">Close</button>
+</div>
+
+<!--FOOTER-->
+<section class="footer">
+
+  <div class="box-container">
+      <!--SECTION 1-->
+      <div class="box">
+          <h3><i class="fas fa-bag-shopping"></i> Store</h3>
+          <p>Sign Up For Our Newsletter To Receive Updates On Special Offers, News And Events.</p>
+          <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+          </div>
+      </div>
+
+      <!--SECTION 2-->
+      <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Home</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Product</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Feature</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Blog</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Contact</a>
+      </div>
+
+      <!--SECTION -->
+      <div class="box">
+          <h3>Useful Links</h3>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Help center</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Ask questions</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Send feedback</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Privacy policy</a>
+          <a href="#" class="link"><i class="fas fa-arrow-right"></i> Terms of use</a>
+      </div>
+
+  </div>
+
+  <div class="credit">copyright &copy; 27th nov 2023 by <span>Suroor</span> | All rights reserved </div>
+
+</section>
+
+</body>
+</html>
+
