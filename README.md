@@ -1,2 +1,54 @@
-# Suroor-ClothingWebsite
-A multi-page clothing website built using HTML and CSS with responsive design. Features consistent navigation, structured layout, and visually appealing color schemes. Designed with UI/UX principles for accessibility and usability, supported by Canva-based mockups for visual planning.
+Clothing Website
+A multi-page clothing website developed using HTML and CSS, featuring pages for browsing categories, viewing products, managing a cart, signing up/logging in, and making payments. The site focuses on responsive design, consistent navigation, and clean UI/UX.
+
+Features
+Multi-page structure with dedicated pages:
+
+homepage.html – Landing page
+
+cart.html – Shopping cart
+
+categories.html – Product categories
+
+essentials.html – Essentials collection
+
+sale.html – Sale items
+
+productdescription.html – Product details
+
+summerpret.html / summerunstiched.html – Summer collections
+
+winterpret.html / winterunstiched.html – Winter collections
+
+login_page.html and signup.html – User authentication pages
+
+payment.html – Payment page
+
+Styling handled via homepage.css and stylepayment.css
+
+Includes images to create a realistic shopping experience
+
+Designed with responsive layout, visual hierarchy, and accessibility
+
+Project Structure
+bash
+Copy
+Edit
+clothing-website/
+ ┣ homepage.html
+ ┣ cart.html
+ ┣ categories.html
+ ┣ essentials.html
+ ┣ login_page.html
+ ┣ payment.html
+ ┣ productdescription.html
+ ┣ sale.html
+ ┣ signup.html
+ ┣ summerpret.html
+ ┣ summerunstiched.html
+ ┣ winterpret.html
+ ┣ winterunstiched.html
+ ┣ homepage.css
+ ┣ stylepayment.css
+ ┣ images/             # All pictures used in the website
+ ┗ README.md
