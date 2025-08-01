@@ -26,7 +26,7 @@ payment.html – Payment page
 
 Styling handled via homepage.css and stylepayment.css
 
-Includes images to create a realistic shopping experience
+Includes images to create a realistic shopping experience  (not added here, if you need the code, you will have to add the pictures yourself)
 
 Designed with responsive layout, visual hierarchy, and accessibility
 
@@ -50,5 +50,5 @@ clothing-website/
  ┣ winterunstiched.html
  ┣ homepage.css
  ┣ stylepayment.css
- ┣ images/             # All pictures used in the website
+ ┣ images/             # ---> not uploaded here
  ┗ README.md
